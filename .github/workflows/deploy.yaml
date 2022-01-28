@@ -1,8 +1,9 @@
+name: My First Manual Workflow
 on: [workflow_dispatch]
-name: manual deploy
 jobs:
-  test:
+  example:
+    name: Example Job
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: echo "hello"
+      - name: "test"
+        run: echo 'bonjour'
