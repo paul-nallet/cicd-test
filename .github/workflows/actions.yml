@@ -2,7 +2,6 @@ name: GitHub Actions Demo
 on: [push]
 jobs:
   code_quality:
-    environment: dev
     name: Code Quality
     runs-on: ${{ matrix.operating-system }}
     strategy:
@@ -31,8 +30,6 @@ jobs:
         run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
       - name: show ssh
         env:
-          SSH_KEY: ${{ secrets.SSH_KEY }}
-          HELLO: ${{ secrets.HELLO }}
+          hello: ${{ secrets.HELLO }}
         run: |
-          echo $SSH_KEY
-          echo $HELLO
+          echo $hello
