@@ -1,4 +1,5 @@
 on: workflow_dispatch
+name: manual deploy
 jobs:
   test:
     runs-on: ubuntu-latest
