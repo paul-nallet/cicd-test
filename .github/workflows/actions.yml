@@ -35,3 +35,6 @@ jobs:
           echo $hello
       - name: php version
         run: php -v
+      - name: php stan
+        run: vendor/bin/phpstan analyse app --level 4
+
