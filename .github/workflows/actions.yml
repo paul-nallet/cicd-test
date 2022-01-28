@@ -17,6 +17,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
   code_quality:
+    environment: dev
     name: Code Quality
     runs-on: ${{ matrix.operating-system }}
     strategy:
