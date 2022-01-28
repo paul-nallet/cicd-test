@@ -33,3 +33,5 @@ jobs:
           hello: ${{ secrets.HELLO }}
         run: |
           echo $hello
+      - name: php version
+        run: php -v
