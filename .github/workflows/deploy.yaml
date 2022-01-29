@@ -1,9 +1,0 @@
-name: My First Manual Workflow
-on: [workflow_dispatch]
-jobs:
-  example:
-    name: Example Job
-    runs-on: ubuntu-latest
-    steps:
-      - name: "test"
-        run: echo 'bonjour'
