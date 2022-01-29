@@ -12,7 +12,7 @@ jobs:
       - name: Setup php with composer and extensions
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: 8.0
           extensions: mbstring, xml, ctype, iconv, intl
       - name: deploy
         uses: deployphp/action@v1
