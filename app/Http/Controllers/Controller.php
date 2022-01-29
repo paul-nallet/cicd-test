@@ -9,12 +9,9 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-<<<<<<< HEAD
     use AuthorizesRequests;
     use DispatchesJobs;
     use ValidatesRequests;
-=======
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function test()  :void
     {
@@ -23,8 +20,6 @@ class Controller extends BaseController
 
     public function mange() :string
     {
-                return "bojour";
-
+        return "bojour";
     }
->>>>>>> a181553 (new secrets)
 }
