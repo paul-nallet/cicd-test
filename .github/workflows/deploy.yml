@@ -12,9 +12,10 @@ jobs:
       - name: Setup php with composer and extensions
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: 8.0
           extensions: mbstring, xml, ctype, iconv, intl
       - name: deploy
-        uses: deployphp/acion@v1
+        uses: deployphp/action@v1
         with:
           private-key: ${{ secrets.SSH_PRIVATE }}
+          dep: deploy
