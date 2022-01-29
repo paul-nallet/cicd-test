@@ -15,6 +15,6 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           extensions: mbstring, xml, ctype, iconv, intl
       - name: deploy
-        uses: deployphp/acion@v1
+        uses: deployphp/action@v1
         with:
           private-key: ${{ secrets.SSH_PRIVATE }}
