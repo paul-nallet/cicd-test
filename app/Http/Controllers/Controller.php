@@ -13,12 +13,11 @@ class Controller extends BaseController
     use DispatchesJobs;
     use ValidatesRequests;
 
-    public function test()  :void
+    public function test(): void
     {
-
     }
 
-    public function mange() :string
+    public function mange(): string
     {
         return "bojour";
     }
