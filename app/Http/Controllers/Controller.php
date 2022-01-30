@@ -24,6 +24,7 @@ class Controller extends BaseController
 
     public function mange(): string
     {
-        return "bojour";
+        return
+            "bojour";
     }
 }
