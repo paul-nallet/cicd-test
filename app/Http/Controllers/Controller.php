@@ -18,7 +18,7 @@ class Controller extends BaseController
         /**
          * @var int $test
          */
-        $test = 0;
+            $test = 'test';
         $test++;
     }
 

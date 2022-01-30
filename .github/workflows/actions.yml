@@ -36,9 +36,7 @@ jobs:
         run: vendor/bin/phpstan analyse app
 
       - name: Run php-cs-fixer
-        run: |
-          composer require friendsofphp/php-cs-fixer
-          ./vendor/bin/php-cs-fixer fix app
+        uses: docker://oskarstark/php-cs-fixer-ga:3.3.2
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
