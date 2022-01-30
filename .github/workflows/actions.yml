@@ -65,10 +65,6 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: build dev assets"
-  deploy-dev:
-    needs:
-      - code_quality
-      - build
-    uses: ./.github/workflows/deploy.yml
+
 
 

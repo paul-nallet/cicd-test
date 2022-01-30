@@ -1,0 +1,14 @@
+name: "New issue"
+on: issues
+jobs:
+  issues_open:
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: send custom message with args
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'new issue'
+
+
