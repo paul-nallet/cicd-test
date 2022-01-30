@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Style pipeline
 on:
   push:
     branches:
@@ -35,3 +35,9 @@ jobs:
       - name: php stan
         run: vendor/bin/phpstan analyse app
 
+      - name: Run php-cs-fixer
+        uses: docker://oskarstark/php-cs-fixer-ga
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply php-cs-fixer changes

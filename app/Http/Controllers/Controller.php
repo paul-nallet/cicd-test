@@ -15,10 +15,15 @@ class Controller extends BaseController
 
     public function test(): void
     {
+        /**
+         * @var int $test
+         */
+        $test = 0;
+            $test++;
     }
 
     public function mange(): string
     {
-        return "bojour";
+                return "bojour";
     }
 }
