@@ -1,0 +1,16 @@
+name: Reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      environnement:
+        required: true
+        type: string
+
+jobs:
+  example_jobs:
+    name: pass input to my action
+    runs-on: ubuntu-latest
+    steps:
+      - name: display input
+        run: echo ${{input.environnement}}
