@@ -38,7 +38,7 @@ jobs:
       - name: Run php-cs-fixer
         uses: docker://oskarstark/php-cs-fixer-ga:3.3.2
         with:
-          args: fix app
+          args: app
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
