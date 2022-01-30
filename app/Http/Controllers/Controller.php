@@ -19,11 +19,11 @@ class Controller extends BaseController
          * @var int $test
          */
         $test = 0;
-            $test++;
+        $test++;
     }
 
     public function mange(): string
     {
-                return "bojour";
+        return "bojour";
     }
 }
