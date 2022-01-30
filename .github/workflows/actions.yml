@@ -43,8 +43,16 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Apply php-cs-fixer changes
-
-      - uses: ./.github/workflows/reusable.yml
+  build:
+    name: compile front application
+    needs: code_quality
+    runs-on: ubuntu-latest
+    environment: developpement
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          environnement: dev
-
+          node-version: '14'
+      - name: yarn install
+        run: yarn
