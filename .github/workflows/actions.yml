@@ -44,7 +44,7 @@ jobs:
         with:
           commit_message: Apply php-cs-fixer changes
   build:
-    name: compile front application
+    name: Build front app
     needs: code_quality
     runs-on: ubuntu-latest
     environment: developpement
@@ -54,5 +54,21 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: yarn install
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Yarn install
         run: yarn
+      - name: Yarn production
+        run: yarn run dev
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: build dev assets"
+  deploy-dev:
+    needs:
+      - code_quality
+      - build
+    uses: ./.github/workflows/deploy.yml
+
+
